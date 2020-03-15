@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TylerEdmonds_Scheduling.jnlp">
+  <information>
+    <title>TylerEdmonds_Scheduling</title>
+    <vendor>Tyler.Edmonds</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Duser.language=en "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TylerEdmonds_Scheduling.jar" size="38025" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TylerEdmonds_Scheduling" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="tyleredmonds_scheduling.TylerEdmonds_Scheduling"  name="TylerEdmonds_Scheduling" />
+  <update check="always"/>
+</jnlp>

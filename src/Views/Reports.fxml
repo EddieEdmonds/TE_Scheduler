@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="739.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.ReportsController">
+   <children>
+      <Label alignment="CENTER" layoutX="31.0" layoutY="22.0" prefHeight="29.0" prefWidth="540.0" style="-fx-border-color: black;" text="Reports" textAlignment="CENTER" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="168.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="30.0" layoutY="77.0" prefHeight="290.0" prefWidth="540.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="76.0">
+        <tabs>
+          <Tab text="Appointment Types per Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="216.0" prefWidth="540.0">
+                     <children>
+                        <TableView fx:id="apptTypeMonthTV" focusTraversable="false" layoutX="14.0" layoutY="6.0" prefHeight="259.0" prefWidth="538.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="rep1MonthCol" prefWidth="166.0" text="Month" />
+                            <TableColumn fx:id="rep1TypeCol" prefWidth="180.0" text="Type" />
+                              <TableColumn fx:id="rep1CountCol" prefWidth="187.0" text="Count" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Consultant Schedule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="consSchedTV" layoutX="69.0" layoutY="14.0" prefHeight="258.0" prefWidth="537.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="consSchedConsCol" prefWidth="124.0" text="Consultant" />
+                            <TableColumn fx:id="consShedCustCol" prefWidth="131.0" text="Customer" />
+                              <TableColumn fx:id="consSchedStartCol" prefWidth="140.0" text="Start" />
+                              <TableColumn fx:id="consSchedEnd" prefWidth="140.0" text="End" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Appointments Today">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="apptTodayTV" layoutX="69.0" layoutY="14.0" prefHeight="258.0" prefWidth="537.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="apptTodayConsCol" prefWidth="125.0" text="Consultant" />
+                              <TableColumn fx:id="apptTodayCustCol" prefWidth="136.0" text="Customer" />
+                              <TableColumn fx:id="apptTodayStartCol" prefWidth="131.0" text="Start" />
+                              <TableColumn fx:id="apptTodayEndCol" prefWidth="143.0" text="End" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="reportCloseButton" layoutX="584.0" layoutY="342.0" mnemonicParsing="false" onAction="#reportCloseHandle" prefHeight="25.0" prefWidth="135.0" text="Close" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

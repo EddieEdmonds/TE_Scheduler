@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="406.0" minWidth="772.0" prefHeight="407.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.MainScreenController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="29.0" prefWidth="705.0" style="-fx-border-color: black;" text="Calendar" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="21.0" layoutY="84.0" prefHeight="298.0" prefWidth="575.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="84.0">
+        <tabs>
+          <Tab fx:id="apptWeek" text="Week">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="241.0">
+                     <opaqueInsets>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </opaqueInsets>
+                     <children>
+                        <TableView fx:id="apptWeekTableView" prefHeight="268.0" prefWidth="575.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                              <TableColumn fx:id="calWApptIdCol" prefWidth="104.0" text="Appointment ID" />
+                            <TableColumn fx:id="calWCustCol" prefWidth="104.0" text="Customer" />
+                              <TableColumn fx:id="calWConsultCol" prefWidth="104.0" text="Consultant" />
+                              <TableColumn fx:id="calWTypeCol" prefWidth="116.0" text="Type" />
+                              <TableColumn fx:id="calWStartTimeCol" prefWidth="137.0" text="Start" />
+                              <TableColumn fx:id="calWEndTimeCol" prefWidth="137.0" text="End" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="apptMonth" text="Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="apptMonthTableView" prefHeight="269.0" prefWidth="575.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="calMApptIdCol" prefWidth="104.0" text="Appointment ID" />
+                              <TableColumn fx:id="calMCustCol" prefWidth="104.0" text="Customer" />
+                              <TableColumn fx:id="calMConsultCol" prefWidth="104.0" text="Consultant" />
+                              <TableColumn fx:id="calMTypeCol" prefWidth="116.0" text="Type" />
+                              <TableColumn fx:id="calMStartTimeCol" prefWidth="137.0" text="Start" />
+                              <TableColumn fx:id="calMEndTimeCol" prefWidth="137.0" text="End" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+      </TabPane>
+      <Button fx:id="apptModButton" layoutX="21.0" layoutY="51.0" mnemonicParsing="false" onAction="#apptModHandle" prefHeight="25.0" prefWidth="135.0" text="Modify Appointment" />
+      <Button fx:id="apptDeleteButton" layoutX="314.0" layoutY="51.0" mnemonicParsing="false" onAction="#apptDeleteHandle" prefHeight="25.0" prefWidth="135.0" text="Delete Appointment" />
+      <Button fx:id="apptAddButton" layoutX="166.0" layoutY="51.0" mnemonicParsing="false" onAction="#apptAddHandle" prefHeight="25.0" prefWidth="135.0" text="Add Appointment" />
+      <Button fx:id="custManageButton" layoutX="461.0" layoutY="51.0" mnemonicParsing="false" onAction="#custManageHandle" prefHeight="25.0" prefWidth="135.0" text="Manage Customers" />
+      <Button fx:id="reportsButton" layoutX="620.0" layoutY="16.0" mnemonicParsing="false" onAction="#reportsHandle" prefHeight="25.0" prefWidth="135.0" text="Reports" AnchorPane.rightAnchor="17.0" />
+      <Button fx:id="logsButton" layoutX="620.0" layoutY="51.0" mnemonicParsing="false" onAction="#logsHandle" prefHeight="25.0" prefWidth="135.0" text="User Access Logs" AnchorPane.rightAnchor="17.0" />
+      <Button fx:id="mainCloseButton" layoutX="620.0" layoutY="357.0" mnemonicParsing="false" onAction="#mainCloseHandle" prefHeight="25.0" prefWidth="135.0" text="Close" AnchorPane.rightAnchor="17.0" />
+   </children>
+</AnchorPane>
